@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,16 +9,15 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.6;
 }
+
 .main-header {
-  display: flex; /*Определяет flex-контейнер, блочный или строчный зависит от переданного значения. Преобразовывает все свои прямые, дочерние элементы во flex-элементы.*/
-  flex-direction: column; /*Устанавливает основную ось, таким образом определяет направление flex-элементов расположенных в flex-контейнере.*/
-  justify-content: center; /*Определяет выравнивание вдоль основной оси (направление зависит от значения свойства flex-direction).*/
-  align-items: center; /*Определяет выравнивание вдоль поперечной оси (направление зависит от значения свойства flex-direction).*/
+  text-align: center;
+  vertical-align: middle;
   background-image: url(./img/beachshowcase.jpg);
-  background-repeat: no-repeat; /*no-repeat — останавливает повторение фонового изображения во всех направлениях.*/
-  background-size: cover; /*браузер сделает изображение достаточно большим, чтобы оно полностью заполнило блок, сохраняя при этом соотношение сторон. В этом случае часть изображения, скорее всего, окажется за пределами блока.*/
+  background-size: cover;
   background-position: center;
   height: 100vh;
+  padding-top: 388px;
 }
 
 .heading-header {
@@ -27,16 +27,22 @@ body {
 
 .header-content {
   font-size: 20px;
+  padding-bottom: 31px;
 }
 
 .header-btn {
   font-size: 18px;
   border: 1px solid #926239;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 14px 20px;
   border-radius: 10px;
   margin-top: 20px;
   color: #926239;
+}
+
+.header-btn:hover {
+  background-color:  #926239;
+  color: white;
 }
 
 .first-blocks {
@@ -52,27 +58,29 @@ body {
 
 .paragraph-2 {
   padding: 20px;
+  background-color: whitesmoke;
 }
 
 .last-3-paragraph {
-  display:flex;
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+}
+
+.paragraph-3,
+.paragraph-5  {
+  display: inline-block;
+  width: 33.3%;
+  color: white;
+  background: #926239;
+  padding: 20px;
   font-size: 17px;
 }
 
-.paragraph-3 {
-  width: 100%;
-  color: white;
-  background: #926239;
-  padding: 20px;
-}
-
 .paragraph-4 {
+  display: inline-block;
+  width: 33.4%;
   padding: 20px;
-}
-
-.paragraph-5 {
-  width: 100%;
-  color: white;
-  background: #926239;
-  padding: 20px;
+  color: #926239;
+  font-size: 17px;
 }
